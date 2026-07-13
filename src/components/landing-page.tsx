@@ -443,7 +443,7 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.72, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           >
-            Transform Your Business with AI Voice Agents
+            AI Voice Agents for Businesses That Never Miss a Customer
           </motion.h1>
           <motion.p
             className="font-body mx-auto mb-8 max-w-2xl text-center text-sm leading-7 font-light text-white/[0.78] md:text-base"
@@ -451,9 +451,9 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.72, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
           >
-            Inspra.ai helps businesses automate inbound and outbound calls,
-            qualify leads, schedule appointments, and provide 24/7 customer
-            support using intelligent AI voice agents.
+            Inspra.ai turns every call into a faster response, a qualified lead,
+            or a booked appointment with intelligent voice agents built for
+            reliable 24/7 customer conversations.
           </motion.p>
           <motion.div
             className="flex flex-wrap items-center justify-center gap-4 sm:gap-6"
