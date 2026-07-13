@@ -373,8 +373,12 @@ function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[#eef8ff] px-6 pt-36 pb-20 text-center text-white sm:pt-40 md:px-16 lg:px-24"
+      className="relative flex min-h-[720px] overflow-hidden bg-[#07172f] px-6 pt-36 pb-20 text-center text-white sm:min-h-screen sm:pt-40 md:px-16 lg:px-24"
     >
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_10%,rgba(108,231,215,0.26),transparent_35%),radial-gradient(circle_at_82%_58%,rgba(30,58,138,0.36),transparent_34%),linear-gradient(180deg,#07172f_0%,#0f172a_58%,#eef8ff_100%)]"
+      />
       <video
         ref={videoRef}
         autoPlay
@@ -382,27 +386,27 @@ function HeroSection() {
         muted
         playsInline
         aria-hidden="true"
-        className="absolute inset-0 z-0 h-full w-full object-cover"
+        className="absolute inset-0 z-[1] h-full w-full object-cover opacity-75"
       />
       <div
         aria-hidden="true"
-        className="hero-fade-top pointer-events-none absolute top-0 right-0 left-0 z-[1] h-[200px] bg-[linear-gradient(to_bottom,#eef8ff,transparent)]"
+        className="hero-fade-top pointer-events-none absolute top-0 right-0 left-0 z-[2] h-[200px] bg-[linear-gradient(to_bottom,rgba(7,23,47,0.72),transparent)]"
       />
       <div
         aria-hidden="true"
-        className="hero-fade-bottom pointer-events-none absolute right-0 bottom-0 left-0 z-[1] h-[200px] bg-[linear-gradient(to_top,#eef8ff,transparent)]"
+        className="hero-fade-bottom pointer-events-none absolute right-0 bottom-0 left-0 z-[2] h-[220px] bg-[linear-gradient(to_top,#000,transparent)]"
       />
       <div
         aria-hidden="true"
-        className="hero-scrim absolute inset-0 z-[1] bg-[#07172f]/[0.34]"
+        className="hero-scrim absolute inset-0 z-[2] bg-[#07172f]/[0.42]"
       />
       <div
         aria-hidden="true"
-        className="hero-lighting absolute inset-0 z-[1] bg-[radial-gradient(circle_at_50%_12%,rgba(108,231,215,0.2),transparent_44%),linear-gradient(180deg,rgba(238,248,255,0.12),rgba(7,23,47,0.22))]"
+        className="hero-lighting absolute inset-0 z-[2] bg-[radial-gradient(circle_at_50%_12%,rgba(108,231,215,0.24),transparent_44%),linear-gradient(180deg,rgba(238,248,255,0.08),rgba(7,23,47,0.34))]"
       />
       <motion.div
         aria-hidden="true"
-        className="absolute top-28 left-[8%] z-[2] h-40 w-40 rounded-full bg-[#6ce7d7]/[0.18] blur-3xl md:h-56 md:w-56"
+        className="absolute top-28 left-[8%] z-[3] h-40 w-40 rounded-full bg-[#6ce7d7]/[0.18] blur-3xl md:h-56 md:w-56"
         animate={
           shouldReduceMotion
             ? undefined
@@ -412,7 +416,7 @@ function HeroSection() {
       />
       <motion.div
         aria-hidden="true"
-        className="absolute right-[10%] bottom-32 z-[2] h-48 w-48 rounded-full bg-[#1e3a8a]/[0.24] blur-3xl md:h-64 md:w-64"
+        className="absolute right-[10%] bottom-32 z-[3] h-48 w-48 rounded-full bg-[#1e3a8a]/[0.24] blur-3xl md:h-64 md:w-64"
         animate={
           shouldReduceMotion
             ? undefined
@@ -422,7 +426,7 @@ function HeroSection() {
       />
       <motion.div
         aria-hidden="true"
-        className="absolute top-1/2 left-1/2 z-[2] h-px w-[min(720px,80vw)] -translate-x-1/2 bg-[linear-gradient(90deg,transparent,rgba(108,231,215,0.48),transparent)]"
+        className="absolute top-1/2 left-1/2 z-[3] h-px w-[min(720px,80vw)] -translate-x-1/2 bg-[linear-gradient(90deg,transparent,rgba(108,231,215,0.48),transparent)]"
         animate={
           shouldReduceMotion
             ? undefined
@@ -431,7 +435,7 @@ function HeroSection() {
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 mx-auto max-w-6xl">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col justify-center">
         <motion.div
           className="hero-glass-panel mx-auto max-w-4xl px-5 py-8 sm:px-8 sm:py-10 md:px-12"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 32, scale: 0.98 }}
