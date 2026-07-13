@@ -333,7 +333,6 @@ export function LandingPage() {
     >
       <Navbar onThemeToggle={toggleTheme} theme={theme} />
       <HeroSection />
-      <BenefitsSection />
       <ServicesSection />
       <IndustriesSection />
       <StatsSection />
@@ -498,76 +497,6 @@ function HeroSection() {
               </a>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function BenefitsSection() {
-  return (
-    <section className="relative w-full bg-black px-4 py-12 text-white sm:px-6 sm:py-20 md:px-10">
-      <div className="mx-auto w-full max-w-[1400px]">
-        <h2
-          className="mb-12 text-center text-3xl font-light text-white sm:mb-24 sm:text-4xl md:text-5xl"
-          style={{ letterSpacing: "-0.04em" }}
-        >
-          Key Benefits
-        </h2>
-
-        <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
-          <article className="relative h-[380px] overflow-hidden rounded-2xl bg-neutral-950 p-6 sm:h-[460px] sm:p-8">
-            <div className="absolute top-1/2 -left-[420px] h-[460px] w-[460px] -translate-y-1/2 rounded-full bg-[#1e3a8a] opacity-40 blur-3xl" />
-            <div className="relative z-10 flex h-full flex-col">
-              <h3 className="text-xl leading-tight font-light text-white sm:text-2xl">
-                Preemptive Risks
-                <br />
-                Scouting and Reactions
-              </h3>
-              <p className="mt-12 max-w-[280px] text-[13px] leading-relaxed font-light text-white/70 sm:mt-20 sm:text-[14px]">
-                Defense platforms constantly observe bandwidth streams, record
-                files, and machine behaviors to uncover unusual patterns or
-                outliers that could signal a defensive failure.
-              </p>
-            </div>
-          </article>
-
-          <article className="relative flex h-[380px] flex-col overflow-hidden rounded-2xl bg-neutral-950 sm:h-[460px]">
-            <div className="relative w-full overflow-hidden" style={{ height: "75%" }}>
-              <video
-                className="block h-full w-full object-cover"
-                src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260421_072701_f6a01abb-eb30-4559-9d6e-774362defbc3.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-              />
-              <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-32 bg-gradient-to-b from-transparent to-neutral-950" />
-            </div>
-            <div className="flex flex-1 items-center justify-start p-6 sm:p-8">
-              <h3 className="text-left text-xl leading-tight font-light text-white sm:text-2xl">
-                Know-how and Sectoral
-                <br />
-                Awareness
-              </h3>
-            </div>
-          </article>
-
-          <article className="relative h-[380px] overflow-hidden rounded-2xl bg-neutral-950 p-6 sm:h-[460px] sm:p-8">
-            <div className="absolute -top-28 -right-28 h-56 w-56 rounded-full bg-[#1e3a8a] opacity-40 blur-3xl" />
-            <div className="relative z-10 flex h-full flex-col">
-              <h3 className="text-xl leading-tight font-light text-white sm:text-2xl">
-                Preemptive Risks
-                <br />
-                Scouting and Reactions
-              </h3>
-              <p className="mt-auto max-w-[320px] text-[13px] leading-relaxed font-light text-white/70 sm:text-[14px]">
-                Defense platforms constantly observe bandwidth streams, record
-                files, and machine behaviors to uncover unusual patterns or
-                outliers that could signal a defensive failure.
-              </p>
-            </div>
-          </article>
         </div>
       </div>
     </section>
